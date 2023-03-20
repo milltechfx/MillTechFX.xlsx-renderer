@@ -9,6 +9,9 @@
   "engines": {
     "node": ">=16.0.0"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milltechfx/MillTechFX.xlsx-renderer"
