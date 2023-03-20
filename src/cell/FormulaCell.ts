@@ -18,18 +18,15 @@ export class FormulaCell extends BaseCell {
 
     // todo extract method match addresses
     const addresses = [];
-    while (true) {
-      const matches = regex.exec(formula);
-      if (matches === null) {
-        break;
-      }
-
+    let matches = regex.exec(formula);
+    while (matches) {
       addresses.push({
         index: matches.index,
         col: matches[1],
         row: +matches[2],
         len: matches[0].length,
       });
+      matches = regex.exec(formula);
     }
     addresses.reverse();
 

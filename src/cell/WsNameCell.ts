@@ -16,7 +16,7 @@ export class WsNameCell extends BaseCell {
   protected static _getName(scope: Scope): string {
     let name =
       WsNameCell._getTargetValue(scope) || WsNameCell._getTarget(scope);
-    name = name.replace(/[\\\/*\[\]?]/g, '.');
+    name = name.replace(/[\\/*[\]?]/g, '.');
 
     if (scope.output.worksheets.find(x => x.name === name)) {
       name += ` ${scope.outputCell.ws}`;
