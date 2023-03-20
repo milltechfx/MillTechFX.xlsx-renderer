@@ -1,22 +1,31 @@
-[![XToolSet Banner](./media/xtoolset-logo-final.svg)](https://github.com/sponsors/Siemienik)
+# XLSX-Renderer
 
-## Set of appealing spreadsheet tools:
+[![NPM](https://img.shields.io/npm/l/xlsx-renderer)![npm](https://img.shields.io/npm/v/xlsx-renderer)](https://www.npmjs.com/package/xlsx-renderer) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/siemienik/xtoolset/xlsx-renderer)](https://github.com/Siemienik/xtoolset/actions) [![codecov](https://codecov.io/gh/Siemienik/xtoolset/branch/master/graph/badge.svg?flag=xlsx-renderer)](https://codecov.io/gh/Siemienik/xtoolset/tree/master/packages/xlsx-renderer)
 
-* Package [XLSX-Renderer](https://siemienik.com/docs/xlsx-renderer) - Export data to Ecma-376 `.XLSX` Excel files based on template, 
-* Package [XLSX-Import](https://siemienik.com/docs/xlsx-import) - Import data from Workbooks / Worksheets Excel files,
-* Command line tools
+Export data to Ecma-376 `.XLSX` Excel files based on template,
 
-## Now working with:
+## Example
+
+```ts
+const renderer = new Renderer();
+await renderer.renderFromFile('./invoice-template.xlsx', invoiceData)
+    .then(wb => wb.xlsx.writeFile('./invoice.xlsx'));
+```
+
+Makes generating spreadsheet files as simple as possible - it is enough one line to generate pretty customizable spreadsheet file.
+
+[Read more :arrow_right:](https://siemienik.com/docs/xlsx-renderer)
+
+## Now working with
 
 | **TypeScript** | **JavaScript** | **NodeJS** | **React** | **Angular** | **Vue** |
 |---|---|---|---|---|---|
-| ![TypeScript](./media/vendors/ts-logo-256.png) | ![JavaScript](./media/vendors/js-logo-256.png) | ![NodeJS](./media/vendors/nodejs-logo-256.png) | ![React](./media/vendors/react-logo-256.png) | ![Angular](./media/vendors/angular-logo-256.png) | ![Vue](./media/vendors/vue-logo-256.png) | 
+| ![TypeScript](./media/ts-logo-256.png) | ![JavaScript](./media/js-logo-256.png) | ![NodeJS](./media/nodejs-logo-256.png) | ![React](./media/react-logo-256.png) | ![Angular](./media/angular-logo-256.png) | ![Vue](./media/vue-logo-256.png) |
 
-## Useful:
+## Useful
 
- * [Official documentation on Siemienik.com](https://siemienik.com/docs/xtoolset)
- * [:heart: Sponsor me](https://github.com/sponsors/siemienik)
- * [Gitter community](https://gitter.im/Siemienik/community)
- * [Repo with examples](https://github.com/Siemienik/XToolset-examples) 
- * Order feature or consulting: consulting@siemienik.com
- * [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSiemienik%2FXToolset.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSiemienik%2FXToolset?ref=badge_shield) License: [MIT](./LICENSE)
+* Part of XToolset, see: [Official XToolset documentation on Siemienik.com](https://siemienik.com/docs/xtoolset)
+* [:heart: Sponsor me](https://github.com/sponsors/siemienik)
+* [Gitter community](https://gitter.im/Siemienik/community)
+* Order feature or consulting: consulting@siemienik.com
+* License: [MIT](./LICENSE)
