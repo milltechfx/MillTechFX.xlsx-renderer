@@ -1,3 +1,4 @@
+import * as log from 'lambda-log';
 import {BaseCell} from './BaseCell';
 import {Cell, ValueType} from 'exceljs';
 import {Scope} from '../Scope';
@@ -34,9 +35,7 @@ export class TemplateStringCell extends BaseCell {
         scope.vm
       );
       if (value === undefined && !scope.isFrozen()) {
-        // todo do it better (use logger or something like that)
-        // tslint:disable-next-line:no-console
-        console.warn(
+        log.warn(
           `WARN: ${path} is undefined for template string output: ${JSON.stringify(
             scope.outputCell
           )} when template is:${JSON.stringify(scope.templateCell)}`

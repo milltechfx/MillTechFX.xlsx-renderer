@@ -1,5 +1,4 @@
 import * as log from 'lambda-log';
-
 import {BaseCell} from './BaseCell';
 import {Cell, ValueType} from 'exceljs';
 import {Scope} from '../Scope';
