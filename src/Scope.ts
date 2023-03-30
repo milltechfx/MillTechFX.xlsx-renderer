@@ -35,6 +35,22 @@ export class Scope {
     );
   }
 
+  public removeCurrentCell(): void {
+    const ct = this.templateCell;
+    const wst = this.template.worksheets[ct.ws];
+    const co = this.outputCell;
+    const wso = this.output.worksheets[co.ws];
+    wst.getRow(ct.r).splice(ct.c, 1);
+    wso.getRow(co.r).splice(co.c, 1);
+  }
+
+  public mergeRowCells(startColumn: number): void {
+    const co = this.outputCell;
+    const wso = this.output.worksheets[co.ws];
+    const rowIndex = co.r;
+    wso.mergeCells(rowIndex, startColumn, rowIndex, co.c);
+  }
+
   public setCurrentOutputValue(value: CellValue): void {
     if (this.frozen) {
       return;

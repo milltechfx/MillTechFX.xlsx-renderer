@@ -17,11 +17,16 @@ import {DumpColsCell} from './cell/DumpColsCell';
 import {WsNameCell} from './cell/WsNameCell';
 import {HyperlinkCell} from './cell/HyperlinkCell';
 import {FormulaCell} from './cell/FormulaCell';
+import {ShowCell} from './cell/ShowCell';
+import {DumpEmptyColsCell} from './cell/DumpEmptyColsCell';
+import {MergeRowCell} from './cell/MergeRowCell';
 
 export class CellTemplatePool {
   protected cells: CellType[] = [
     NormalCell,
+    MergeRowCell,
     EndRowCell,
+    ShowCell,
     VariableCell,
     TemplateStringCell,
     TemplateFormulaCell,
@@ -32,6 +37,7 @@ export class CellTemplatePool {
     EndLoopCell,
     ContinueCell,
     DumpColsCell,
+    DumpEmptyColsCell,
     SumCell,
     AverageCell,
     WsNameCell,
