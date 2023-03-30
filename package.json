@@ -2,8 +2,8 @@
   "name": "@milltechfx/xlsx-renderer",
   "version": "1.0.0",
   "description": "Allows render spreadsheet (xlsx) files based on the template supplied by indeed viewModel.",
-  "main": "lib/Renderer.js",
-  "types": "lib/Renderer.d.ts",
+  "main": "./build/src//Renderer.js",
+  "types": "./build/src/Renderer.d.ts",
   "author": "Paweł Siemienik <npm@siemienik.pl>",
   "license": "MIT",
   "engines": {
@@ -47,6 +47,7 @@
     "@milltechfx/style": "^1.1.2",
     "@milltechfx/tsconfig": "^1.2.0",
     "@types/chai": "^4.3.4",
+    "@types/lambda-log": "^3.0.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.15.3",
     "chai": "^4.3.7",
@@ -59,7 +60,8 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "exceljs": "^4.3.0"
+    "exceljs": "^4.3.0",
+    "lambda-log": "^3.1.0"
   },
   "files": [
     "build/**/*"

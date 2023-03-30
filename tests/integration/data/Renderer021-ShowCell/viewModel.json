@@ -1,0 +1,30 @@
+{
+	"firstName": {
+		"name": "First Name",
+		"show": true
+	},
+	"middleName": {
+		"name": "Middle Name",
+		"show": false
+	},
+	"lastName": {
+		"name": "Last Name"
+	},
+	"age": {
+		"name": "Age",
+		"show": false
+	},
+	"rows": [
+		{
+			"firstName": "Julie",
+			"middleName": "Amiable",
+			"lastName": "Castillo",
+			"age": 20
+		}, {
+			"firstName": "Glen",
+			"middleName": "Arthurine",
+			"lastName": "Khan",
+			"age": 41
+		}
+	]
+}
