@@ -16,7 +16,7 @@ export class Renderer {
     const output = await templateFactory();
 
     // todo Temporary fixation for VM mutating problem, @see https://github.com/Siemienik/XToolset/issues/137
-    const vmCopy = JSON.parse(JSON.stringify(vm));
+    const vmCopy = structuredClone(vm);
 
     const scope = new Scope(template, output, vmCopy);
 
