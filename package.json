@@ -1,6 +1,6 @@
 {
   "name": "@milltechfx/xlsx-renderer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Allows render spreadsheet (xlsx) files based on the template supplied by indeed viewModel.",
   "main": "./build/src//Renderer.js",
   "types": "./build/src/Renderer.d.ts",
