@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.1.0...v1.1.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* SC-1995 used native clone on VM to not lose Date objects ([dcde18d](https://github.com/milltechfx/MillTechFX.xlsx-renderer/commit/dcde18d1c80b676ade4e868c1e3d2f3cba462c93))
+
 ## [1.1.0](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.0.0...v1.1.0) (2023-03-30)
 
 
