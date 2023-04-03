@@ -1,4 +1,5 @@
 import {Workbook} from 'exceljs';
+import clonedeep from 'lodash.clonedeep';
 
 import {Scope} from './Scope';
 import {CellTemplatePool} from './CellTemplatePool';
@@ -16,7 +17,7 @@ export class Renderer {
     const output = await templateFactory();
 
     // todo Temporary fixation for VM mutating problem, @see https://github.com/Siemienik/XToolset/issues/137
-    const vmCopy = structuredClone(vm);
+    const vmCopy = clonedeep(vm);
 
     const scope = new Scope(template, output, vmCopy);
 

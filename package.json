@@ -48,6 +48,7 @@
     "@milltechfx/tsconfig": "^1.2.0",
     "@types/chai": "^4.3.4",
     "@types/lambda-log": "^3.0.0",
+    "@types/lodash.clonedeep": "^4.5.7",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.15.3",
     "chai": "^4.3.7",
@@ -61,7 +62,8 @@
   },
   "dependencies": {
     "exceljs": "^4.3.0",
-    "lambda-log": "^3.1.0"
+    "lambda-log": "^3.1.0",
+    "lodash.clonedeep": "^4.5.0"
   },
   "files": [
     "build/**/*"
