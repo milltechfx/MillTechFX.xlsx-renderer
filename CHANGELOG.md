@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.1.1...v1.1.2) (2023-04-03)
+
+
+### Miscellaneous Chores
+
+* release 1.1.2 ([02241ac](https://github.com/milltechfx/MillTechFX.xlsx-renderer/commit/02241ac51b9d8fb5d7aa421a8eeb4c3e9fbbff40))
+
 ## [1.1.1](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.1.0...v1.1.1) (2023-03-30)
 
 
