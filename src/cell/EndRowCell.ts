@@ -13,7 +13,8 @@ export class EndRowCell extends BaseCell {
   }
 
   public apply(scope: Scope): EndRowCell {
-    const ignoreStyle = scope.getCurrentTemplateString().split(' ')[2] === 'true';
+    const ignoreStyle =
+      scope.getCurrentTemplateString().split(' ')[2] === 'true';
     if (ignoreStyle) {
       scope.freezeOutput();
     }

@@ -1,4 +1,5 @@
 import {Cell, CellValue, Workbook} from 'exceljs';
+import {parseJSON, isValid, format, parse} from 'date-fns';
 // TODO fix exceljs index.d.ts -> it provides only an interface Range (@see https://github.com/Siemienik/xlsx-renderer/issues/44)
 // @ts-ignore
 import Range from 'exceljs/lib/doc/range';
@@ -51,14 +52,39 @@ export class Scope {
     wso.mergeCells(rowIndex, startColumn, rowIndex, co.c);
   }
 
+  private isDateFormat(formatString: string) {
+    const dateString = format(new Date(), formatString);
+    try {
+      return isValid(parse(dateString, formatString, new Date()));
+    } catch (e) {
+      return false;
+    }
+  }
+
   public setCurrentOutputValue(value: CellValue): void {
     if (this.frozen) {
       return;
     }
-    this.output.worksheets[this.outputCell.ws].getCell(
+
+    const curentCell = this.output.worksheets[this.outputCell.ws].getCell(
       this.outputCell.r,
       this.outputCell.c
-    ).value = value;
+    );
+
+    // in case we have a date represented as string (e.g got converted to string by JSON.stringify)
+    // and we have a date format applyed in the excel cell (numFmt)
+    // then we should parse and set the value as Date in the cell so that the excel applies the date format
+    if (
+      value &&
+      typeof value === 'string' &&
+      curentCell.numFmt &&
+      this.isDateFormat(curentCell.numFmt) &&
+      isValid(parseJSON(value))
+    ) {
+      curentCell.value = parseJSON(value);
+    } else {
+      curentCell.value = value;
+    }
   }
 
   public applyStyles(): void {
