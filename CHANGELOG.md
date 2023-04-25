@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.1.2...v1.2.0) (2023-04-25)
+
+
+### Features
+
+* apply excel date format when date is represented as string ([2c75ff5](https://github.com/milltechfx/MillTechFX.xlsx-renderer/commit/2c75ff5e4072456f4a0fb7d152b442603c1b0535))
+* update foreach/endrow/endloop with new behaviour ([60c9de1](https://github.com/milltechfx/MillTechFX.xlsx-renderer/commit/60c9de1e7cc161a29c14b696ee9c378d1b9a0542))
+
 ## [1.1.2](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.1.1...v1.1.2) (2023-04-03)
 
 
