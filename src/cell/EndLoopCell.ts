@@ -33,7 +33,7 @@ export class EndLoopCell extends BaseCell {
     if (__start && !__iterated) {
       scope.templateCell = __start;
     } else {
-      scope.incrementRow();
+      scope.incrementCol();
     }
 
     return this;
