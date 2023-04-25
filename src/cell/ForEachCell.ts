@@ -131,7 +131,7 @@ export class ForEachCell extends BaseCell {
       __endOutput = __endOutput || scope.outputCell.r;
     }
 
-    scope.incrementRow();
+    scope.incrementCol();
 
     scope.vm[target] = Object.freeze({
       ...next,

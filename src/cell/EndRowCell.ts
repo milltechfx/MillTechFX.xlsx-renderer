@@ -8,12 +8,22 @@ export class EndRowCell extends BaseCell {
       cell &&
       cell.type === ValueType.String &&
       typeof cell.value === 'string' &&
-      cell.value === '#! END_ROW'
+      cell.value.substring(0, 10) === '#! END_ROW'
     );
   }
 
   public apply(scope: Scope): EndRowCell {
+    const ignoreStyle =
+      scope.getCurrentTemplateString().split(' ')[2] === 'true';
+    if (ignoreStyle) {
+      scope.freezeOutput();
+    }
+
     super.apply(scope);
+
+    if (ignoreStyle) {
+      scope.unfreezeOutput();
+    }
 
     scope.setCurrentOutputValue(null);
     scope.incrementRow();
