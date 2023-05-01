@@ -30,16 +30,12 @@ export class ShowCell extends BaseCell {
       show = true;
     }
 
-    const value = targetPath
-      .split('.')
-      .reduce((p, c) => (typeof p === 'object' ? p[c] : p), scope.vm);
-
-    if (value === undefined && !scope.isFrozen()) {
-      log.warn(`${targetPath} is undefined for`, {
-        outputCell: scope.outputCell,
-        templateCell: scope.templateCell,
-      });
-    }
+    const value =
+      targetPath !== undefined
+        ? targetPath
+            .split('.')
+            .reduce((p, c) => (typeof p === 'object' ? p[c] : p), scope.vm)
+        : null;
 
     if (show) {
       scope.setCurrentOutputValue(value);
