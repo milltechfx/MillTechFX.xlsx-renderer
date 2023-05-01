@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.2.0...v1.3.0) (2023-05-01)
+
+
+### Features
+
+* extended show cell with optional target ([d23c1c3](https://github.com/milltechfx/MillTechFX.xlsx-renderer/commit/d23c1c374f6bf5991f43d06413fa48efe60d5470))
+
 ## [1.2.0](https://github.com/milltechfx/MillTechFX.xlsx-renderer/compare/v1.1.2...v1.2.0) (2023-04-25)
 
 
